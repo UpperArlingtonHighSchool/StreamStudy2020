@@ -60,15 +60,116 @@ public graph(String title) {
 
     //Boys (Age,weight) series
     XYSeries series1 = new XYSeries(var1+" and "+var2);
-    double ben = 0.0;
+    double y = 0.0;
+    double x = 0.0;
+  //  System.out.println("g"+data.get(0).getNitrate());
     for(int i=0;i<16;i++)
     {
  //   int place = data.get(i).indexOf(var1);
    // System.
     	switch(var1)
     	{
-    	//case "
+        case "Flow Rate":
+        x = data.get(i).getYear();
+        break;
+    case "Turbidity":
+        x = data.get(i).getTurbid();
+        break;
+    case "Temperature":
+        x = data.get(i).getTemp();
+        break;
+    case "TDS":
+        x = data.get(i).getTDS();
+        break;
+    case "Salinity":
+        x = data.get(i).getYear();
+        break;
+    case "Conductivity":
+        x = data.get(i).getConduct();
+        break;
+    case "Hardness":
+        x = data.get(i).getYear();
+        break;
+    case "Total Chlorine":
+        x = data.get(i).getTotalCl();
+        break;
+    case "Free Chlorine":
+        x = data.get(i).getFreeCl();
+        break;
+    case "Alkalinity":
+        x = data.get(i).getAlk();
+        break;
+    case "PH":
+        x = data.get(i).getPH();
+        break;
+    case "Nitrate":
+        x = data.get(i).getNitrate();
+        break;
+    case "Nitrite":
+        x = data.get(i).getNitrite();
+        break;
+    case "Phosphate":
+        x = data.get(i).getPhosphate();
+        break;
     	}
+    	
+    	
+    	
+    	switch(var2)
+    	{
+        case "FlowRate":
+        y = data.get(i).getYear();
+        break;
+    case "Turbidity":
+        y = data.get(i).getTurbid();
+        break;
+    case "Temperature":
+        y = data.get(i).getTemp();
+        break;
+    case "TDS":
+        y = data.get(i).getTDS();
+        break;
+    case "Salinity":
+        y = data.get(i).getYear();
+        break;
+    case "Conductivity":
+        y = data.get(i).getConduct();
+        break;
+    case "Hardness":
+        y = data.get(i).getYear();
+        break;
+    case "Total Chlorine":
+        y = data.get(i).getTotalCl();
+        break;
+    case "Free Chlorine":
+        y = data.get(i).getFreeCl();
+        break;
+    case "Alkalinity":
+        y = data.get(i).getAlk();
+        break;
+    case "PH":
+        y = data.get(i).getPH();
+        break;
+    case "Nitrate":
+        y = data.get(i).getNitrate();
+        break;
+    case "Nitrite":
+        y = data.get(i).getNitrite();
+        break;
+    case "Phosphate":
+        y = data.get(i).getPhosphate();
+        break;
+    	}
+    	
+    	series1.add(x,y);
+    }
+    dataset.addSeries(series1);
+    	/*
+    	public int getYear() {
+    		return year;
+    	}
+    	
+    	}/*
     //series1.add(, 72.9);
     series1.add(2, 81.6);
     series1.add(3, 88.9);

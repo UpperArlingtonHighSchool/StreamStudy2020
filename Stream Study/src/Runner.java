@@ -40,14 +40,15 @@ public class Runner {
 				newDP.setStats(dataFields);
 			}
 		 do{
-			 System.out.println(dataPoints.get(0).getYear());
-		 System.out.println("What is the first variable? (Spell Exact");
+			// System.out.println(dataPoints.get(0).getYear());
+		 System.out.println("What is the first variable? (Spell Exact)");
 		 String variable1 = nick.nextLine();
 		 System.out.println("What is the second variable? (Spell Exact)");
 		 String variable2 = nick.nextLine();
 		// System.out.println(variable1+variable2);
 		 
 		    SwingUtilities.invokeLater(() -> {
+		    	graph.datapoints(dataPoints);
 		    	graph.variable(variable1, variable2);
 		    	//graph var = new graph(variable1,variable2);
 		      graph example = new graph(""+variable1+ " VS "+variable2+" comparison chart");
