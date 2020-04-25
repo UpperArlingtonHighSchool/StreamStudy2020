@@ -60,11 +60,16 @@ public graph(String title) {
 
     //Boys (Age,weight) series
     XYSeries series1 = new XYSeries(var1+" and "+var2);
+    double ben = 0.0;
     for(int i=0;i<16;i++)
     {
-    int place = data.get(i).indexOf(var1);
-    System.
-    series1.add(, 72.9);
+ //   int place = data.get(i).indexOf(var1);
+   // System.
+    	switch(var1)
+    	{
+    	//case "
+    	}
+    //series1.add(, 72.9);
     series1.add(2, 81.6);
     series1.add(3, 88.9);
     series1.add(4, 96);
